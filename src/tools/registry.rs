@@ -13,6 +13,9 @@ use crate::tools::logic::calls::MakeCallTool;
 use crate::tools::logic::messages::SendMessageTool;
 use crate::tools::logic::google_calendar::GoogleCalendarTool;
 use crate::tools::logic::google_drive::GoogleDriveTool;
+use crate::tools::logic::machines::{
+    ChronosTool, TechneTool, SomaTool, ElenchusTool, LexTool, HarmonyTool, PolisTool,
+};
 use crate::utils::logger::XLog;
 
 const TAG: &str = "ToolRegistry";
@@ -48,6 +51,14 @@ impl ToolRegistry {
         self.register(Box::new(SendMessageTool));
         self.register(Box::new(GoogleCalendarTool));
         self.register(Box::new(GoogleDriveTool));
+        // Philosophical machines (physis_pro reducers).
+        self.register(Box::new(ChronosTool));
+        self.register(Box::new(TechneTool));
+        self.register(Box::new(SomaTool));
+        self.register(Box::new(ElenchusTool));
+        self.register(Box::new(LexTool));
+        self.register(Box::new(HarmonyTool));
+        self.register(Box::new(PolisTool));
     }
 
     pub fn register(&mut self, tool: Box<dyn BaseTool>) {

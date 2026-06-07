@@ -11,3 +11,4 @@ pub mod calls;
 pub mod messages;
 pub mod google_calendar;
 pub mod google_drive;
+pub mod machines;

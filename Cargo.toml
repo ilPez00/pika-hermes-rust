@@ -16,3 +16,7 @@ env_logger = "0.10"
 chrono = { version = "0.4", features = ["serde"] }
 thiserror = "1.0"
 uuid = { version = "1.0", features = ["v4"] }
+# The physis engine — native access to PhysisCore + the philosophical-machine
+# reducers (chronos/techne/soma/elenchus/lex/harmony/polis). default-features
+# off so we don't pull axum/ort/ratatui — just the core + machines.
+physis_pro = { path = "../physis_pro", default-features = false }
